@@ -1,8 +1,9 @@
-/* IDPP - Introducao ao Direito Publico e Privado - UniFamec - 2026.2
+/* DIP - Direito Internacional Integrado - UniFamec - 2026.2
    Prof. Mario Bastos
-   Derivado da folha de estilo do site de Direito Constitucional.
-   Muda a paleta (azul e vermelho da UniFamec) e troca a serifa por
-   tipografia sem serifa em toda a pagina. Arquivo independente. */
+   Derivado da folha do site de IDPP (mesmas classes, mesmo azul e vermelho
+   da UniFamec). A diferenca visual esta no bloco "Paleta DIP", no fim do
+   arquivo: fundo azul-marinho com texto branco; cartoes e areas de leitura
+   continuam claros, com texto escuro. Arquivo independente do IDPP. */
 
 :root {
   color-scheme: light;
@@ -666,4 +667,120 @@ button {
   border: 1px solid var(--accent-2);
   border-radius: 999px;
   text-decoration: none;
+}
+
+/* --- Paleta DIP (24/09/2026) ---------------------------------------------
+   Regra: texto escuro so sobre fundo claro; sobre o marinho, texto branco.
+   Bloco aditivo: sobrepoe as regras acima sem altera-las. --- */
+
+:root {
+  --page: #10294a;
+  --page-deep: #0a1c36;
+  --page-ink: #ffffff;
+  --page-muted: #cdd9ea;
+  --page-line: rgba(255, 255, 255, 0.22);
+  --page-link: #b9d3f5;
+}
+
+body {
+  background: var(--page);
+  color: var(--page-ink);
+}
+
+a {
+  color: var(--page-link);
+}
+
+.site-header {
+  background: var(--page-deep);
+  border-bottom: 4px solid var(--accent-2);
+}
+
+.brand strong {
+  color: var(--page-muted);
+}
+
+nav a {
+  color: var(--page-ink);
+}
+
+.hero {
+  border-bottom-color: var(--page-line);
+}
+
+.hero p,
+.intro {
+  color: var(--page-muted);
+}
+
+.site-footer {
+  border-top-color: var(--page-line);
+  color: var(--page-muted);
+}
+
+/* Superficies claras: texto escuro e links no azul institucional */
+.card,
+.info-list li,
+.timeline-list li,
+.doc-list li,
+.reading-item,
+.toc-card,
+.quiz-panel,
+.ai-disclosure,
+.question-card,
+.feedback-card,
+.exam-meta div,
+.score-summary div,
+.notice,
+.submission-panel,
+.rubric-box,
+.answer-note,
+table,
+.module-content,
+.exam-form {
+  color: var(--ink);
+}
+
+.card a,
+.info-list a,
+.timeline-list a,
+.doc-list a,
+.reading-item a,
+.toc-card a,
+.quiz-panel a,
+.ai-disclosure a,
+.notice a,
+.module-content a,
+.exam-form a,
+table a {
+  color: var(--accent);
+}
+
+.card {
+  border-color: transparent;
+  border-top: 4px solid var(--accent-2);
+}
+
+.info-list li {
+  border-color: transparent;
+  background: var(--soft);
+}
+
+/* Paginas de modulo e de prova: o texto corrido fica numa folha clara */
+.module-content,
+.exam-form {
+  padding: 28px 32px 32px;
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.ai-disclosure.compact {
+  color: var(--muted);
+}
+
+@media (max-width: 680px) {
+  .module-content,
+  .exam-form {
+    padding: 18px 16px 22px;
+  }
 }
