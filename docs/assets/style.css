@@ -691,17 +691,19 @@ a {
   color: var(--page-link);
 }
 
+/* Cabecalho claro (opcao C, 24/09/2026): nome em vermelho, resto em marinho */
 .site-header {
-  background: var(--page-deep);
+  background: var(--soft);
   border-bottom: 4px solid var(--accent-2);
 }
 
-.brand strong {
-  color: var(--page-muted);
+.site-header .brand strong {
+  color: var(--accent-2);
 }
 
-nav a {
-  color: var(--page-ink);
+.site-header .brand span,
+.site-header nav a {
+  color: var(--accent);
 }
 
 .hero {
