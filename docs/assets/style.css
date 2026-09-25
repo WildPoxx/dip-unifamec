@@ -786,3 +786,52 @@ table a {
     padding: 18px 16px 22px;
   }
 }
+
+/* --- Box de curiosidades (conteúdo extra dos módulos) — 2026-09-25 -----------
+   Bloco destacado do corpo do texto: fundo próprio, filete vermelho e etiqueta.
+   O aluno reconhece de relance que ali é leitura extra, e não matéria corrida. */
+
+.box-curiosidade {
+  position: relative;
+  margin: 38px 0;
+  padding: 26px 28px 22px;
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--accent-2);
+  border-radius: 8px;
+  background: #fbf7f2;
+  color: var(--ink);
+}
+
+.box-curiosidade::before {
+  content: "Curiosidade";
+  display: block;
+  margin-bottom: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+}
+
+.box-curiosidade h3 {
+  margin: 0 0 14px;
+  font-size: 1.22rem;
+  line-height: 1.25;
+  color: var(--accent);
+}
+
+.box-curiosidade p { font-size: 1rem; }
+.box-curiosidade p:last-child { margin-bottom: 0; }
+
+.box-curiosidade blockquote {
+  margin: 18px 0;
+  padding: 10px 18px;
+  border-left: 4px solid var(--line);
+  background: rgba(255, 255, 255, .75);
+  font-size: 0.98rem;
+}
+
+@media (max-width: 680px) {
+  .box-curiosidade { padding: 20px 18px 16px; }
+}
